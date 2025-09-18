@@ -7,239 +7,189 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
-    html{
-      scroll-behavior: smooth;
-    }
-    /* Text slide animation */
-    .slide-text {
-      overflow: hidden;
-      height: 2.5rem;
-      position: relative;
-    }
-    .slide-text span {
-      position: absolute;
-      width: 100%;
-      opacity: 0;
-      transform: translateY(100%);
-      animation: slide 9s infinite;
-    }
-    .slide-text span:nth-child(1) { animation-delay: 0s; }
-    .slide-text span:nth-child(2) { animation-delay: 3s; }
-    .slide-text span:nth-child(3) { animation-delay: 6s; }
-
-    @keyframes slide {
-      0% { opacity: 0; transform: translateY(100%); }
-      10% { opacity: 1; transform: translateY(0); }
-      30% { opacity: 1; transform: translateY(0); }
-      40% { opacity: 0; transform: translateY(-100%); }
-      100% { opacity: 0; }
-    }
-
-      /* Shake animation */
-    @keyframes shake {
-      0% { transform: translate(0, 0) rotate(0); }
-      20% { transform: translate(-2px, 0) rotate(-2deg); }
-      40% { transform: translate(2px, 0) rotate(2deg); }
-      60% { transform: translate(-2px, 0) rotate(-2deg); }
-      80% { transform: translate(2px, 0) rotate(2deg); }
-      100% { transform: translate(0, 0) rotate(0); }
-    }
-
-    /* Apply shake on hover */
-    #skills li:hover {
-      animation: shake 0.4s ease-in-out;
-    }
-
-    /* Scroll animations */
-    .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
-    .reveal.active { opacity: 1; transform: translateY(0); }
-    .reveal-right { opacity: 0; transform: translateX(80px); transition: all 0.8s ease; }
-    .reveal-right.active { opacity: 1; transform: translateX(0); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-800">
   <!-- Header -->
-<header class="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 backdrop-blur-md shadow-lg z-50">
-  <div class="container mx-auto flex justify-between items-center py-4 px-6">
-    <!-- Logo / Name -->
-    <h1 class="text-3xl font-extrabold text-white tracking-wide">
-      <span class="text-yellow-300">Antony</span> Papith⚡
-    </h1>
-    <!-- Navbar -->
-    <nav class="hidden md:flex space-x-8 font-semibold text-lg">
-      <a href="#about" class="relative text-white transition duration-300 hover:text-yellow-300 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">About</a>
-      <a href="#skills" class="relative text-white transition duration-300 hover:text-yellow-300 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Skills</a>
-      <a href="#experience" class="relative text-white transition duration-300 hover:text-yellow-300 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Experience</a>
-      <a href="#projects" class="relative text-white transition duration-300 hover:text-yellow-300 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Projects</a>
-      <a href="#contact" class="relative text-white transition duration-300 hover:text-yellow-300 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+  <header class="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 backdrop-blur-md shadow-lg z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <!-- Logo / Name -->
+      <h1 class="text-3xl font-extrabold text-white tracking-wide">
+        <span class="text-yellow-300">ANTONY</span> PAPITH⚡
+      </h1>
+      
+      <!-- Navbar (Desktop) -->
+      <nav class="hidden md:flex space-x-8 font-semibold text-lg">
+        <a href="#home" class="relative text-white transition duration-300 hover:text-yellow-300 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+        <a href="#about" class="relative text-white transition duration-300 hover:text-yellow-300 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">About</a>
+        <a href="#skills" class="relative text-white transition duration-300 hover:text-yellow-300 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Skills</a>
+        <a href="#experience" class="relative text-white transition duration-300 hover:text-yellow-300 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Experience</a>
+        <a href="#projects" class="relative text-white transition duration-300 hover:text-yellow-300 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Projects</a>
+        <a href="#contact" class="relative text-white transition duration-300 hover:text-yellow-300 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-yellow-300 after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+      </nav>
+
+      <!-- Hamburger (Mobile) -->
+      <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none">
+        ☰
+      </button>
+    </div>
+  </header>
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+  <!-- Sidebar (Mobile) -->
+  <aside id="sidebar" class="fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-blue-700 via-indigo-700 to-purple-700 shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+    <div class="flex justify-between items-center p-4 border-b border-gray-400">
+      <h2 class="text-xl font-bold text-yellow-300">Papith</h2>
+      <button id="close-btn" class="text-white hover:text-red-600 text-3xl">&times;</button>
+    </div>
+    <nav class="flex flex-col space-y-6 p-6 font-semibold text-lg">
+      <a href="#home" class="text-white hover:text-yellow-300">Home</a>
+      <a href="#about" class="text-white hover:text-yellow-300">About</a>
+      <a href="#skills" class="text-white hover:text-yellow-300">Skills</a>
+      <a href="#experience" class="text-white hover:text-yellow-300">Experience</a>
+      <a href="#projects" class="text-white hover:text-yellow-300">Projects</a>
+      <a href="#contact" class="text-white hover:text-yellow-300">Contact</a>
     </nav>
-  </div>
-</header>
+  </aside>
 
   <!-- Hero Section -->
-<section class="flex flex-col-reverse md:flex-row items-center justify-between min-h-screen px-6 md:px-20 pt-20">
-  <!-- Left: Text -->
-  <div class="flex-1 text-center md:text-left md:ml-10 mt-10 md:mt-0">
-    <h2 class="text-xl sm:text-2xl md:text-3xl font-medium mb-3">Hi, I am</h2>
-    <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold text-blue-700 mb-4">Antony Papith</h1>
-    <!-- Slide Text -->
-    <div class="slide-text text-xl sm:text-2xl md:text-4xl font-semibold text-green-600 mb-8">
-      <span>Softwear Developer</span>
-      <span>Coder</span>
-      <span>Frontend Designer</span>
-    </div>
-    <!-- Buttons -->
-    <div class="mt-8 flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
-      <a href="./assets/AntonyPapith_resume.pdf" download 
-         class="px-5 py-2.5 rounded-lg bg-blue-600 text-white font-semibold shadow-lg 
-                hover:scale-105 hover:shadow-xl hover:bg-blue-700 transition transform duration-300">
-        Download CV
-      </a>
-      <a href="#contact" 
-         class="px-5 py-2.5 rounded-lg border-2 border-green-600 text-green-600 font-semibold shadow-lg
-                hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-xl 
-                transition transform duration-300">
-        Contact Info
-      </a>
-    </div>
-  </div>
+  <section id="home" class="flex flex-col-reverse md:flex-row items-center justify-between min-h-screen px-6 md:px-20 pt-20">
+    <!-- Left: Text -->
+    <div class="flex-1 text-center md:text-left md:ml-10 mt-10 md:mt-0">
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-medium mb-3">Hi, I am</h2>
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold text-blue-700 mb-4">Antony Papith</h1>
+      
+      <!-- Slide Text -->
+      <div class="slide-text text-xl sm:text-2xl md:text-4xl font-semibold text-green-600 mb-8">
+        <span>Softwear Developer</span>
+        <span>Full-Stack Web Developer</span>
+        <span>Frontend Designer</span>
+        <!-- <span>Programmer</span> -->
+        <!-- <span>Creative Thinker</span> -->
+        <!-- <span>Problem Solver</span> -->
+      </div>
 
-  <!-- Right: Image -->
-  <div class="flex-1 flex justify-center">
-    <img src="./assets/business-office-remote-lifestyle.jpg" 
-         alt="Profile Image" 
-         class="w-48 h-48 sm:w-64 sm:h-64 md:w-[28rem] md:h-[28rem] 
-                object-cover rounded-full shadow-2xl border-4 border-white 
-                hover:scale-105 transition-transform duration-500">
-  </div>
-</section>
+      <!-- Buttons -->
+      <div class="mt-8 flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
+        <a href="./assets/Papith Resume.pdf" download 
+          class="px-5 py-2.5 rounded-lg bg-blue-600 text-white font-semibold shadow-lg 
+                  hover:scale-105 hover:shadow-xl hover:bg-blue-700 transition transform duration-300">
+          Download CV
+        </a>
+        <a href="#contact" 
+          class="px-5 py-2.5 rounded-lg border-2 border-green-600 text-green-600 font-semibold shadow-lg
+                  hover:bg-green-600 hover:text-white hover:scale-105 hover:shadow-xl 
+                  transition transform duration-300">
+          Contact Info
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="flex-1 flex justify-center pt-10">
+      <img src="./assets/business-office-remote-lifestyle.jpg" 
+          alt="Profile Image" 
+          class="w-48 h-48 sm:w-64 sm:h-64 md:w-[28rem] md:h-[28rem] 
+                  object-cover rounded-full shadow-2xl border-4 border-white 
+                  hover:scale-105 transition-transform duration-500">
+    </div>
+  </section>
 
   <!-- About -->
-<section id="about" class="py-20 px-6 md:px-20 pb-5 bg-gray-100 reveal">
-  <!-- Heading (centered properly) -->
-  <div class="text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-indigo-600 mb-12 tracking-wide border-b-4 border-indigo-600 inline-block">
-      About Me
-    </h2>
-  </div>
-  <!-- Flex Layout -->
-  <div class="flex flex-col md:flex-row items-start justify-start gap-12">
-    <!-- Image (shifted 20px right) -->
-    <img src="./assets/digital-art-style-illustration-graphic-designer.jpg" 
-         alt="About Image" 
-         class="w-72 h-72 sm:w-80 sm:h-80 object-cover rounded-2xl shadow-2xl md:ml-10">
-
-    <!-- Text Container (also shifted 20px right) -->
-    <div class="flex flex-col gap-6 max-w-full text-center md:text-left md:ml-5">
-      <p class="text-lg leading-relaxed">
-        I’m a passionate developer specializing in 
-        <span class="font-semibold text-blue-600">frontend & backend</span> 
-        development. I love crafting modern, responsive, and user-friendly web experiences.
-      </p>
-
-      <p class="text-lg leading-relaxed">
-        Versatile full-stack developer skilled in HTML5, Tailwind CSS, JavaScript, PHP (Laravel), and MySQL. Built a mobile-first responsive
-        portfolio and a fast-loading CRUD asset tracker (under 2s on
-        simulated 3G). Proficient in MVC architecture, modular DB design, and
-        Git workflows. Collaborative, detail-oriented, and eager to solve
-        performance-driven challenges.
-      </p>
+  <section id="about" class="py-20 px-6 md:px-20 pb-5 bg-gray-100 reveal">
+    <!-- Heading (centered properly) -->
+    <div class="text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-indigo-600 mb-12 tracking-wide border-b-4 border-indigo-600 inline-block">
+        About Me
+      </h2>
     </div>
-  </div>
-</section>
+
+    <!-- Flex Layout -->
+    <div class="flex flex-col md:flex-row items-center md:items-start justify-start gap-12">
+      <!-- Image (centered on mobile, shifted on desktop) -->
+      <img src="./assets/digital-art-style-illustration-graphic-designer.jpg" 
+          alt="About Image" 
+          class="w-72 h-72 sm:w-80 sm:h-80 object-cover rounded-2xl shadow-2xl md:ml-10 mx-auto md:mx-0">
+
+      <!-- Text Container (centered on mobile, aligned left on desktop) -->
+      <div class="flex flex-col gap-6 max-w-full text-center md:text-left md:ml-5">
+        <p class="text-lg leading-relaxed">
+          I’m <span class="font-semibold text-blue-600">Antony Papith R,</span> a passionate <span class="font-semibold text-blue-600">Full-Stack Web Developer</span> with expertise in building scalable and user-friendly applications. With a solid foundation in <span class="font-semibold text-blue-600">Computer Science (B.Sc.)</span> and hands-on industry experience, I specialize in developing modern web solutions using <span class="font-semibold text-blue-600">Laravel, PHP, React.js,</span> and <span class="font-semibold text-blue-600">MySQL.</span>
+        </p>
+        <p class="text-lg leading-relaxed">
+          💻 Over the past few years, I’ve worked on both <span class="font-semibold text-blue-600">frontend and backend development,</span> building <span class="font-semibold text-blue-600">responsive websites, e-commerce platforms, and course management systems</span> that improve user experience and streamline workflows.
+        </p>
+        <p class="text-lg leading-relaxed">
+          🚀 My internship experiences at <span class="font-semibold text-blue-600">Aaroj E-Commerce</span> and <span class="font-semibold text-blue-600">Inspire Tech</span> allowed me to work on <span class="font-semibold text-blue-600">real-world projects,</span> collaborate in agile teams, and optimize performance with clean and maintainable code.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- Skill -->
-<section id="skills" class="py-20 px-6 md:px-20 bg-black-100 reveal">
-  <!-- Heading -->
-  <div class="text-center mb-12">
-    <h2 class="text-3xl md:text-4xl font-bold text-indigo-600 tracking-wide relative inline-block">
-      Skills
-      <span class="absolute left-0 bottom-[-8px] w-full h-1 bg-indigo-600 rounded-full"></span>
-    </h2>
-  </div>
-  <!-- Skills Container -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- Frontend -->
-    <div class="p-6 bg-gradient-to-br from-indigo-100 via-indigo-50 to-indigo-100 rounded-2xl shadow-lg hover:shadow-2xl transition">
-      <!-- Heading -->
-      <h3 class="text-2xl md:text-3xl font-extrabold text-indigo-700 mb-8 text-center tracking-wider relative">
-        Frontend
-        <span class="absolute left-1/2 -bottom-2 transform -translate-x-1/2 w-16 h-1 bg-indigo-700 rounded-full"></span>
-      </h3>
-      <!-- Shuffled Layout -->
-      <ul class="grid grid-cols-2 gap-6">
-        <li class="flex items-center gap-3">
-          <i class="fa-brands fa-html5 text-orange-600 text-2xl"></i>
-          <span class="text-gray-800 font-semibold text-lg">HTML5</span>
-        </li>
-        <li class="flex items-center gap-3">
-          <i class="fa-brands fa-css3-alt text-blue-600 text-2xl"></i>
-          <span class="text-gray-800 font-semibold text-lg">CSS3</span>
-        </li>
-        <li class="flex items-center gap-3">
-          <i class="fa-brands fa-js text-yellow-500 text-2xl"></i>
-          <span class="text-gray-800 font-semibold text-lg">JavaScript</span>
-        </li>
-        <li class="flex items-center gap-3">
-          <i class="fa-brands fa-react text-cyan-500 text-2xl"></i>
-          <span class="text-gray-800 font-semibold text-lg">React</span>
-        </li>
-        <li class="flex items-center gap-3 col-span-2 justify-center">
-          <i class="fa-solid fa-wind text-indigo-500 text-2xl"></i>
-          <span class="text-gray-800 font-semibold text-lg">Tailwind CSS</span>
-        </li>
-      </ul>
+  <section id="skills" class="py-20 px-6 md:px-20 bg-gray-100 reveal">
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-indigo-600 tracking-wide relative inline-block">
+        Skills
+        <span class="absolute left-0 bottom-[-8px] w-full h-1 bg-indigo-600 rounded-full"></span>
+      </h2>
     </div>
-    <!-- Backend -->
-    <div class="p-6 bg-gradient-to-br from-green-100 via-green-50 to-green-100 rounded-2xl shadow-lg hover:shadow-2xl transition">
-      <!-- Heading -->
-      <h3 class="text-2xl md:text-3xl font-extrabold text-green-700 mb-8 text-center tracking-wider relative">
-        Backend
-        <span class="absolute left-1/2 -bottom-2 transform -translate-x-1/2 w-16 h-1 bg-green-700 rounded-full"></span>
-      </h3>
-      <!-- Skills List -->
-      <ul class="grid grid-cols-2 gap-6">
-        <li class="flex items-center gap-3">
-          <i class="fa-brands fa-php text-indigo-600 text-2xl"></i>
-          <span class="text-gray-800 font-semibold text-lg">PHP</span>
-        </li>
-        <li class="flex items-center gap-3">
-          <i class="fa-solid fa-database text-gray-600 text-2xl"></i>
-          <span class="text-gray-800 font-semibold text-lg">MySQL</span>
-        </li>
-        <li class="flex items-center gap-3 col-span-2 justify-center">
-          <i class="fa-brands fa-laravel text-red-500 text-2xl"></i>
-          <span class="text-gray-800 font-semibold text-lg">Laravel</span>
-        </li>
-      </ul>
+
+    <!-- Skills Container -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Frontend -->
+      <div class="p-6 bg-gradient-to-br from-indigo-100 via-indigo-50 to-indigo-100 rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <h3 class="text-2xl md:text-3xl font-extrabold text-indigo-700 mb-8 text-center tracking-wider relative">
+          Frontend
+          <span class="absolute left-1/2 -bottom-2 transform -translate-x-1/2 w-16 h-1 bg-indigo-700 rounded-full"></span>
+        </h3>
+        <ul class="grid grid-cols-2 gap-6">
+          <li class="flex items-center gap-3"><i class="fa-brands fa-html5 text-orange-600 text-2xl"></i><span class="text-gray-800 font-semibold text-lg">HTML5</span></li>
+          <li class="flex items-center gap-3"><i class="fa-brands fa-css3-alt text-blue-600 text-2xl"></i><span class="text-gray-800 font-semibold text-lg">CSS3</span></li>
+          <li class="flex items-center gap-3"><i class="fa-brands fa-js text-yellow-500 text-2xl"></i><span class="text-gray-800 font-semibold text-lg">JavaScript</span></li>
+          <li class="flex items-center gap-3"><i class="fa-brands fa-react text-cyan-500 text-2xl"></i><span class="text-gray-800 font-semibold text-lg">React</span></li>
+          <li class="flex items-center gap-3"><i class="fa-brands fa-bootstrap text-purple-600 text-2xl"></i><span class="text-gray-800 font-semibold text-lg">Bootstrap</span></li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-wind text-indigo-500 text-2xl"></i><span class="text-gray-800 font-semibold text-lg">Tailwind CSS</span></li>
+        </ul>
+      </div>
+
+      <!-- Backend -->
+      <div class="p-6 bg-gradient-to-br from-green-100 via-green-50 to-green-100 rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <h3 class="text-2xl md:text-3xl font-extrabold text-green-700 mb-8 text-center tracking-wider relative">
+          Backend
+          <span class="absolute left-1/2 -bottom-2 transform -translate-x-1/2 w-16 h-1 bg-green-700 rounded-full"></span>
+        </h3>
+        <ul class="grid grid-cols-2 gap-6">
+          <li class="flex items-center gap-3"><i class="fa-brands fa-php text-indigo-600 text-2xl"></i><span class="text-gray-800 font-semibold text-lg">PHP</span></li>
+          <li class="flex items-center gap-3"><i class="fa-brands fa-python text-yellow-600 text-2xl"></i><span class="text-gray-800 font-semibold text-lg">Python</span></li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-database text-gray-600 text-2xl"></i><span class="text-gray-800 font-semibold text-lg">MySQL</span></li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-server text-gray-700 text-2xl"></i><span class="text-gray-800 font-semibold text-lg">PhpMyAdmin</span></li>
+          <li class="flex items-center gap-3 col-span-2 justify-center"><i class="fa-brands fa-laravel text-red-500 text-2xl"></i><span class="text-gray-800 font-semibold text-lg">Laravel</span></li>
+        </ul>
+      </div>
+
+      <!-- Tools -->
+      <div class="p-6 bg-gradient-to-br from-yellow-100 via-yellow-50 to-yellow-100 rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <h3 class="text-2xl md:text-3xl font-extrabold text-yellow-700 mb-8 text-center tracking-wider relative">
+          Tools
+          <span class="absolute left-1/2 -bottom-2 transform -translate-x-1/2 w-16 h-1 bg-yellow-700 rounded-full"></span>
+        </h3>
+        <ul class="grid grid-cols-2 gap-6">
+          <li class="flex items-center gap-3"><i class="fa-brands fa-git-alt text-orange-600 text-2xl"></i><span class="text-gray-800 font-semibold text-lg">Git</span></li>
+          <li class="flex items-center gap-3"><i class="fa-brands fa-github text-black text-2xl"></i><span class="text-gray-800 font-semibold text-lg">GitHub</span></li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-flask text-orange-800 text-2xl "></i><span class="text-gray-800 font-semibold text-lg">Postman</span></li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-code-branch text-green-600 text-2xl"></i><span class="text-gray-800 font-semibold text-lg">VS Code</span></li>
+          <li class="flex items-center gap-3"><i class="fa-brands fa-linux text-black text-2xl"></i><span class="text-gray-800 font-semibold text-lg">Linux</span></li>
+          <li class="flex items-center gap-3"><i class="fa-brands fa-windows text-blue-600 text-2xl"></i><span class="text-gray-800 font-semibold text-lg">Windows</span></li>
+        </ul>
+      </div>
+
     </div>
-    <!-- Tools -->
-    <div class="p-6 bg-gradient-to-br from-yellow-100 via-yellow-50 to-yellow-100 rounded-2xl shadow-lg hover:shadow-2xl transition">
-      <!-- Heading -->
-      <h3 class="text-2xl md:text-3xl font-extrabold text-yellow-700 mb-8 text-center tracking-wider relative">
-        Tools
-        <span class="absolute left-1/2 -bottom-2 transform -translate-x-1/2 w-16 h-1 bg-yellow-700 rounded-full"></span>
-      </h3>
-      <!-- Skills List -->
-      <ul class="grid grid-cols-2 gap-6">
-        <li class="flex items-center gap-3">
-          <i class="fa-brands fa-git-alt text-orange-600 text-2xl"></i>
-          <span class="text-gray-800 font-semibold text-lg">Git</span>
-        </li>
-        <li class="flex items-center gap-3">
-          <i class="fa-brands fa-github text-black text-2xl"></i>
-          <span class="text-gray-800 font-semibold text-lg">GitHub</span>
-        </li>
-        <li class="flex items-center gap-3 col-span-2 justify-center">
-          <i class="fa-solid fa-code-branch text-green-600 text-2xl"></i>
-          <span class="text-gray-800 font-semibold text-lg">VS Code</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+  </section>
+
 
   <!--Experience-->
 <section id="experience" class="py-20 px-6 md:px-20 pb-5 bg-gradient-to-b from-gray-50 to-gray-100 reveal">
@@ -250,28 +200,30 @@
       <span class="absolute left-0 bottom-[-8px] w-full h-1 bg-indigo-600 rounded-full"></span>
     </h2>
   </div>
+
   <!-- Experience Timeline -->
   <div class="relative border-l-4 border-indigo-400 pl-8 md:pl-12 space-y-12">
-    
+
     <!-- Item 1 -->
     <div class="relative">
-      <div class="absolute -left-5 top-2 w-4 h-4 bg-indigo-500 rounded-full border-4 border-white shadow"></div>
-      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+      <div class="absolute -left-5 top-2 w-5 h-5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full border-4 border-white shadow"></div>
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
         <h3 class="text-xl font-semibold text-gray-800">Full-Stack Developer</h3>
         <p class="text-sm text-gray-500">2025 – Present</p>
         <p class="mt-3 text-gray-600 leading-relaxed">
           Built and deployed responsive websites and apps using 
-          <span class="font-medium text-blue-600">Php, Tailwind, Laravel, MySQL</span>. 
+          <span class="font-medium text-blue-600">React Js, PHP, Tailwind, Laravel, MySQL</span>. 
           Focused on performance, clean UI, and client-focused solutions.
         </p>
       </div>
     </div>
+
     <!-- Item 2 -->
     <div class="relative">
-      <div class="absolute -left-5 top-2 w-4 h-4 bg-indigo-500 rounded-full border-4 border-white shadow"></div>
-      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+      <div class="absolute -left-5 top-2 w-5 h-5 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full border-4 border-white shadow"></div>
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
         <h3 class="text-xl font-semibold text-gray-800">Web Developer Intern – Inspire Tech</h3>
-        <p class="text-sm text-gray-500">2024</p>
+        <p class="text-sm text-gray-500">2023 – 2024</p>
         <p class="mt-3 text-gray-600 leading-relaxed">
           Assisted in building dynamic applications, optimized 
           <span class="font-medium text-blue-600">front-end performance</span>, 
@@ -280,8 +232,22 @@
       </div>
     </div>
 
+    <!-- Item 3 -->
+    <div class="relative">
+      <div class="absolute -left-5 top-2 w-5 h-5 bg-gradient-to-r from-indigo-500 to-green-500 rounded-full border-4 border-white shadow"></div>
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
+        <h3 class="text-xl font-semibold text-gray-800">Computer Science Student</h3>
+        <p class="text-sm text-gray-500">2022 – 2023</p>
+        <p class="mt-3 text-gray-600 leading-relaxed">
+          Studied core concepts in <span class="font-medium text-blue-600">software engineering, databases, and web development</span>. 
+          Engaged in academic projects and team-based hackathons.
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>
+
 
   <!-- Projects -->
 <section id="projects" class="py-20 px-6 md:px-20 pb-5 bg-gradient-to-br from-blue-50 to-gray-100 reveal-right">
@@ -381,10 +347,10 @@
         </button>
       </form>
       <div class="flex justify-center gap-6 mt-6">
-        <a href="https://linkedin.com" target="_blank">
+        <a href="https://www.linkedin.com/in/antony-papith" target="_blank">
           <i class="fa-brands fa-linkedin text-3xl text-blue-600 hover:text-blue-800"></i>
         </a>
-        <a href="https://github.com" target="_blank">
+        <a href="https://wa.me/919789185316" target="_blank">
           <i class="fa-brands fa-whatsapp text-3xl text-gray-800 hover:text-green-600"></i>
         </a>
       </div>
@@ -428,11 +394,11 @@
         Phone: <a href="tel:+919789185316" class="hover:text-white transition">+91 9789185316</a>
       </p>
       <div class="flex justify-center md:justify-start gap-4 text-2xl">
-        <a href="https://linkedin.com" target="_blank" class="hover:text-blue-800 transition"><i class="ri-linkedin-box-fill"></i></a>
-        <a href="https://github.com" target="_blank" class="hover:text-gray-600 transition"><i class="ri-github-fill"></i></a>
-        <a href="https://github.com" target="_blank" class="hover:text-green-600 transition"><i class="ri-whatsapp-fill"></i></a>
-        <a href="https://github.com" target="_blank" class="hover:text-pink-600 transition"><i class="ri-instagram-fill"></i></a>
-        <a href="https://teligram.com" target="_blank" class="hover:text-blue-500 transition"><i class="ri-telegram-fill"></i></a>
+        <a href="https://www.linkedin.com/in/antony-papith" target="_blank" class="hover:text-blue-800 transition"><i class="ri-linkedin-box-fill"></i></a>
+        <a href="https://github.com/AntonyPapith" target="_blank" class="hover:text-gray-600 transition"><i class="ri-github-fill"></i></a>
+        <a href="https://wa.me/919789185316" target="_blank" class="hover:text-green-600 transition"><i class="ri-whatsapp-fill"></i></a>
+        <a href="https://www.instagram.com/__itz__me__bruce_l_e_e__" target="_blank" class="hover:text-pink-600 transition"><i class="ri-instagram-fill"></i></a>
+        <a href="https://t.me/AntonyPapith" target="_blank" class="hover:text-blue-500 transition"><i class="ri-telegram-fill"></i></a>
       </div>
     </div>
   </div>
@@ -442,21 +408,5 @@
   </div>
 </footer>
 
-  <script>
-    // Scroll animation
-    function reveal() {
-      let reveals = document.querySelectorAll(".reveal, .reveal-right");
-      for (let i = 0; i < reveals.length; i++) {
-        let windowHeight = window.innerHeight;
-        let elementTop = reveals[i].getBoundingClientRect().top;
-        let elementVisible = 100;
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        }
-      }
-    }
-    window.addEventListener("scroll", reveal);
-    reveal();
-  </script>
-</body>
+<script src="script.js"></script>
 </html>

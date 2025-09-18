@@ -1,0 +1,66 @@
+
+    html{
+      scroll-behavior: smooth;
+    }
+
+    .slide-text {
+      position: relative;
+      height: 3rem; /* adjust height for text size */
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide-text span {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .slide-text span.active {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+
+    .slide-text span.exit {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    /* Shake animation */
+    @keyframes shake {
+      0% { transform: translate(0, 0) rotate(0); }
+      20% { transform: translate(-2px, 0) rotate(-2deg); }
+      40% { transform: translate(2px, 0) rotate(2deg); }
+      60% { transform: translate(-2px, 0) rotate(-2deg); }
+      80% { transform: translate(2px, 0) rotate(2deg); }
+      100% { transform: translate(0, 0) rotate(0); }
+    }
+    /* Apply shake on hover */
+    #skills li:hover {
+      animation: shake 0.4s ease-in-out;
+    }
+
+    /* Scroll animations */
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .reveal-right { opacity: 0; transform: translateX(80px); transition: all 0.8s ease; }
+    .reveal-right.active { opacity: 1; transform: translateX(0); }
+
+    /* Mobile view adjustments */
+    @media (max-width: 640px) {
+      #home h1 {
+        font-size: 2.5rem; /* bigger main name */
+      }
+      #home .slide-text {
+        font-size: 1.8rem; /* bigger rotating text */
+      }
+      #home img {
+        width: 14rem;
+        height: 14rem;
+      }
+    }
