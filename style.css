@@ -9,6 +9,12 @@
       font-family: 'Roboto', sans-serif;
       box-sizing: border-box;
     }
+    #home{
+      background-image: url('./assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+    }
     .slide-text {
       position: relative;
       height: 3rem; /* adjust height for text size */
